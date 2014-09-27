@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+    function authorize() {
+        var username = document.getElementById('username').value
+        var password = document.getElementById('password').value
+        if(!username || !password) {
+            alert('Oops... You did not populate the username or password');
+        } else {
+            $.ajax({
+                type: 'POST',
+                datatype: 'json',
+                data: {'username': username, 'password': password},
+                contentType: 'application/json; charset=utf-8',
+                url: 'http://localhost:3333'
+//                success: function(data) {
+//                    alert('Success!')
+//                } else {
+//                    alert('Ajax return not succeeded.')
+//                }
+                });
+        }
+    }
+</script>
+<body>
+
+<div id="main">
+    <h1>SHAS</h1>
+    <div id="login" style="width:800px; margin:0 auto;">
+        <h2>Login Form</h2>
+        <hr/>
+            <label>UserName  :</label>
+            <input type="text" name="username" id="username" placeholder="username"/><br /><br />
+            <label>Password  :</label>
+            <input type="password" name="password" id="password" placeholder="**********"/><br/><br />
+            <input type="submit" value=" Login " name="submit" onClick="authorize()"/><br />
+            <!--<span><?php echo $error; ?></span>-->
+    </div>
+    <p2 id='p2'></p2>
+    <!--&lt;!&ndash; Right side div &ndash;&gt;-->
+    <!--<div id="formget">-->
+    <!--<a href=http://www.formget.com/app><img src="formget.jpg" alt="Online Form Builder"/></a>-->
+    <!--</div>-->
+
+</div>
+
+</body>
+</html>
