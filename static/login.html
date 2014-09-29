@@ -11,14 +11,21 @@
         } else {
             $.ajax({
                 type: 'POST',
-                datatype: 'json',
-                data: {'username': username, 'password': password},
+                dataType: 'json',
+                data: JSON.stringify({'username': username, 'password': password}),
                 contentType: 'application/json; charset=utf-8',
-                url: 'http://localhost:3333'
-//                success: function(data) {
-//                    alert('Success!')
-//                } else {
-//                    alert('Ajax return not succeeded.')
+                url: 'http://localhost:3333/authenticate',
+                success: function(data) {
+                    if(!data.error) {
+                    console.log(data);
+                    alert('Welcome ' + data.fname + ' ' + data.lname + '!')
+                    window.location.href='/home';
+                    } else {
+                        alert('Could not authenticate! Please try again.')
+                    }
+                }
+//                error: function(data) {
+//                    alert('Ajax request error! ' + data);
 //                }
                 });
         }

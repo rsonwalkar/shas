@@ -3,6 +3,7 @@ __author__ = 'rohit.sonwalkar'
 
 import pprint
 import os
+import json
 from flask import Flask, request, jsonify
 import pymysql
 
@@ -17,16 +18,38 @@ app = Flask(__name__, static_url_path='')
 def login():
     if request.method == 'GET':
         return app.send_static_file('login.html')
-    elif request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        return username
+    # elif request.method == 'POST':
+    #     return jsonify(request.get_json())
         # conn = pymysql.connect(host='localhost', port=3306, db='test')
         # cursor = conn.cursor()
         # cursor.execute('select * from persons')
         # for rows in cursor.fetchall():
         #     return str(rows)
 
+@app.route("/authenticate", methods=['POST'])
+def authenticate():
+    username = request.get_json()['username']
+    password = request.get_json()['password']
+    conn = pymysql.connect(host='localhost', port=3306, db='test')
+    cursor = conn.cursor()
+    cursor.execute('select fname, lname from login where username="' + username + '" and password="' + password + '"')
+    rows = cursor.fetchall()
+    response = {}
+    if len(rows) > 0:
+        response['fname'] = rows[0][0]
+        response['lname'] = rows[0][1]
+        return jsonify(**response)
+    else:
+        return jsonify({'error': 'Could not authenticate'})
+
+@app.route("/home", methods=['GET'])
+def home():
+    return app.send_static_file('index.html')
+
+    # for rows in cursor.fetchall():
+    #     return str(rows)
+    # # print(request.get_json()['username'])
+    # # return 'Hello'
 
 
 if __name__ == "__main__":
