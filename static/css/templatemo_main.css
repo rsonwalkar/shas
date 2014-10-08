@@ -213,7 +213,10 @@ img.slide {
     margin: 0;
     font-size: 18px;
 }
-
+.logout {
+    color: #ff0000;
+    text-decoration: none;
+}
 .change-section {
     color: #fff;
     text-decoration: none;

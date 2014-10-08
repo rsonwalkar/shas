@@ -17,7 +17,6 @@
 
         <!-- Google Web Font Embed -->
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,500,300,700' rel='stylesheet' type='text/css'>
-
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/templatemo_main.css">
@@ -56,7 +55,7 @@
                         <section id="menu-section" class="active">
                             <div class="row">
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#products" class="change-section">
+                                    <a href="#products" class="change-section" onclick="alarm()">
                                         <div class="black-bg btn-menu">
                                             <i class="fa fa-cubes"></i>
                                             <h2>Devices</h2>
@@ -88,13 +87,13 @@
                                     </a>
                                 </div>
 
-                                <!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">-->
-                                    <!--<a href="#company-intro" class="change-section">-->
-                                        <!--<div class="black-bg btn-menu">-->
-                                            <!--<h2>Introduction to Company</h2>-->
-                                        <!--</div>-->
-                                    <!--</a>-->
-                                <!--</div>-->
+                                <div class="col-xs-12">
+                                    <a href="#company-intro" class="change-section">
+                                        <div class="black-bg btn-menu">
+                                            <h2 onclick="logout()">Logout</h2>
+                                        </div>
+                                    </a>
+                                </div>
                                 <!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-bottom-20">-->
                                     <!--<a href="#testimonials" class="change-section">-->
                                         <!--<div class="black-bg btn-menu">-->
@@ -111,7 +110,10 @@
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
                                         <h2>Security System</h2>
                                         <p>Your Security system is running at <span class="green">100%</span>. <span class="red">Security breach detected!</span></p>
+                                        <div id="turnoffdiv">
                                         <p><span id="countdown" class="red"></span></p>
+                                        <button id="turnoffbutton" onclick="removealarm()"></button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6 margin-top-20">
@@ -303,23 +305,44 @@
         <script src="js/jquery.backstretch.min.js"></script>
         <script src="js/templatemo_script.js"></script>
         <script>
-var seconds = 60;
-function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
+function removealarm() {
+    $('#turnoffdiv').remove();
+}
+
+function alarm() {
+    secondPassed(parseInt(60));
+}
+
+var temptime;
+function secondPassed(seconds) {
+    temptime = seconds;
+    //var minutes = Math.round((seconds - 30)/60);
+    var remainingSeconds = temptime % 60;
     if (remainingSeconds < 10) {
         remainingSeconds = "0" + remainingSeconds;
     }
-    document.getElementById('countdown').innerHTML = "911 being called in " + minutes + ":" + remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
+    //document.getElementById('countdown').innerHTML = "911 being called in " + remainingSeconds + " seconds";
+    //document.getElementById('turnoffalarm').innerHTML =  '<button id="btn" name="btn">Button</button>';
+    document.getElementById('countdown').innerHTML = "911 being called in " + remainingSeconds + " seconds";
+    document.getElementById('turnoffbutton').innerHTML =  'Turn off Alarm!';
+    if (temptime == 0) {
+        //clearInterval(countdownTimer);
+        $('#btn').remove();
         document.getElementById('countdown').innerHTML = "Dialing 911...";
     } else {
-        seconds--;
+        temptime = temptime - 1;
     }
 }
+setInterval('secondPassed(temptime)', 1000);
 
-var countdownTimer = setInterval('secondPassed()', 1000);
+
+
+
+
+
+function logout() {
+    window.location.replace("http://localhost:3333");
+}
 </script>
 
     </body>
