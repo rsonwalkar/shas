@@ -39,12 +39,14 @@
             <div class="image-section">
                 <div class="image-container">
                     <img src="images/zoom-bg-1.jpg" id="menu-img" class="main-img inactive" alt="Smart Home Automation System">
-                    <img src="images/zoom-bg-2.jpg" id="products-img" class="inactive" alt="Product">
+                    <img src="images/zoom-bg-5.jpg" id="products-img" class="inactive" alt="Product">
                     <img src="images/zoom-bg-3.jpg" id="services-img"  class="inactive" alt="Services">
                     <img src="images/zoom-bg-4.jpg" id="about-img" class="inactive" alt="About">
-                    <img src="images/zoom-bg-5.jpg" id="contact-img" class="inactive" alt="Contact">
-                    <img src="images/zoom-bg-6.jpg" id="company-intro-img" class="main-img inactive" alt="Company Intro">
-                    <img src="images/zoom-bg-7.jpg" id="testimonials-img" class="main-img inactive" alt="Testimonials">
+                    <img src="images/zoom-bg-6.jpg" id="account-img" class="inactive" alt="Contact">
+                    <img src="images/sprinklers.jpg" id="sprinkler-img" class="main-img inactive" alt="Company Intro">
+                    <img src="images/thermostat.jpg" id="thermostat-img" class="main-img inactive" alt="Testimonials">
+                    <img src="images/sockets.jpg" id="sockets-img" class="main-img inactive" alt="Testimonials">
+                    <img src="images/security.jpg" id="security-img" class="main-img inactive" alt="Testimonials">
                 </div>
             </div>
 
@@ -79,7 +81,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-20">
-                                    <a href="#contact" class="change-section">
+                                    <a href="#account" class="change-section">
                                         <div class="black-bg btn-menu">
                                             <i class="fa fa-envelope"></i>
                                             <h2>Accounts</h2>
@@ -108,34 +110,44 @@
                             <div class="row">
                                 <div class="col-sm-6 col-md-6 col-lg-6 margin-top-20">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                        <h2>Security System</h2>
+                                        <a href="#security" class="change-section">
+                                        <h2>Security</h2>
+                                        </a>
                                         <p>Your Security system is running at <span class="green">100%</span>. <span class="red">Security breach detected!</span></p>
                                         <div id="turnoffdiv">
                                         <p><span id="countdown" class="red"></span></p>
                                         <button id="turnoffbutton" onclick="removealarm()"></button>
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6 margin-top-20">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                        <a href="#thermostat" class="change-section">
                                         <h2>Thermostat</h2>
                                         <p>Your Thermostat is running at <span class="orangered">50%</span>. 1 out of 2 thermostats is down.</p>
+                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6 margin-top-20">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                        <a href="#sprinkler" class="change-section">
                                         <h2>Sprinkler System</h2>
                                         <p>Your Sprinkler System is running at <span class="orange">90%</span>. 2 out of 20 sprinklers are down.</p>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6 margin-top-20">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                        <a href="#sockets" class="change-section">
                                         <h2>Smart Sockets</h2>
                                         <p>Your Smart sockets are running at <span class="green">100%</span>. 40 out of 40 sockets are up.</p>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-6 margin-top-20">
                                     <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                        <a href="#lighting" class="change-section">
                                         <h2>Lighting</h2>
                                         <p>Your Lighting system is running at <span class="green">100%</span>. 50 out of 50 lights are up.</p>
                                     </div>
@@ -192,7 +204,7 @@
                                 </div>
                             </div>
                         </section><!-- /.about-section -->
-                        <section id="contact-section" class="inactive">
+                        <section id="account-section" class="inactive">
                             <div class="row">
                                 <div class="black-bg col-sm-12 col-md-12 col-lg-12">
                                     <h2 class="text-center">Accounts</h2>
@@ -207,23 +219,25 @@
                                     <!--</div>-->
 
                                     <div class="col-sm-6 col-md-6 margin-bottom-20">
-                                        <form action="#" method="post">
 
                                                 <div class="form-group">
                                                     <!--<label for="contact_name">Name</label>-->
-                                                    <input type="text" id="contact_name" class="form-control" placeholder="Name" />
+                                                    <input type="text" id="contact_fname" class="form-control" placeholder="First Name" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <!--<label for="contact_name">Name</label>-->
+                                                    <input type="text" id="contact_lname" class="form-control" placeholder="Last Name" />
                                                 </div>
                                                 <div class="form-group">
                                                     <!--<label for="contact_email">Email Address</label>-->
-                                                    <input type="text" id="contact_email" class="form-control" placeholder="Email Address" />
+                                                    <input type="text" id="contact_email" class="form-control" placeholder="Username" />
                                                 </div>
                                                 <div class="form-group">
                                                     <!--<label for="contact_message">Message</label>-->
-                                                    <input type="password" id="contact_message" class="form-control" placeholder="Password" />
+                                                    <input type="password" id="contact_password" class="form-control" placeholder="Password" />
                                                 </div>
-                                                <button type="submit" class="btn btn-primary">Create account</button>
+                                                <button type="submit" class="btn btn-primary" onclick="adduser()">Create user account</button>
 
-                                        </form>
                                     </div>
 
                                     <div class="clearfix"></div>
@@ -239,14 +253,12 @@
                                 </div>
                             </div>
                         </section><!-- /.contact-section -->
-                        <section id="company-intro-section" class="inactive">
+                        <section id="security-section" class="inactive">
                             <div class="row">
                                 <div class="black-bg col-sm-12 col-md-12 col-lg-12">
                                     <h2 class="text-center">Company Intro</h2>
                                     <div class="col-sm-12 col-md-12">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus quam, eleifend eget mattis vel, mollis eu lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque pulvinar ut lorem sit amet feugiat. Nullam cursus ante lectus, sed vehicula nisi consectetur ut. Fusce venenatis porta lectus at luctus. Nullam et sapien purus. Fusce congue non neque eu malesuada. Quisque dictum cursus pretium.</p>
-                                        <p><a href="#">Donec cursus</a> justo vel metus suscipit, sit amet gravida justo pulvinar. Sed non luctus est, vel viverra nisi. Suspendisse neque ipsum, porta vitae dui eget, feugiat pretium tortor. Praesent at dolor semper, egestas elit sit amet, consectetur eros. Praesent rutrum tempor mi, quis aliquet tellus bibendum eget. Etiam et suscipit nunc. Nulla faucibus hendrerit augue. Proin faucibus sem ligula, at egestas elit ultricies non.</p>
-                                        <p>Maecenas ac massa erat. Quisque ac volutpat odio, quis viverra tortor. Ut interdum ornare odio, ac iaculis est lacinia nec. Cras in pulvinar urna. Sed molestie, arcu ac auctor rhoncus, nisl justo dictum leo, eu interdum est nibh eget neque. Donec sed est nec velit fringilla lobortis. Aliquam eu elit ut arcu auctor dictum. Nulla vel lobortis enim. In hac habitasse platea dictumst. Maecenas ultricies egestas dui, eu dignissim justo semper non. </p>
+                                        <p>Security information here</p>
                                     </div>
                                 </div>
                             </div>
@@ -260,10 +272,58 @@
                                 </div>
                             </div>
                         </section><!-- /.company-intor-section -->
-                        <section id="testimonials-section" class="inactive">
+                        <section id="sprinkler-section" class="inactive">
                             <div class="row">
                                 <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+                                    <h2 class="text-center">Sprinkler System</h2>
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                        <h3 class="text-center">Master Sprinkler system status</h3>
+                                        <button id="sprinklerstatus" onclick="mainsprinklerbuttontoggle()">ON</button>
+                                        <p class="text-center"><span id="sprinklerstatustext" class="red"></span></p>
+                                    </div>
 
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                        <h3 class="text-center">Phase 1 Sprinkler system status</h3>
+                                        <button id="sprinkler1status" onclick="sprinkler1buttontoggle()">ON</button>
+                                        <p class="text-center">This sprinkler system spans the lawn on the south-west side of house in front of garage</p>
+                                        <p class="text-center"><span id="sprinkler1statustext" class="red"></span></p>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                        <h3 class="text-center">Phase 2 Sprinkler system status</h3>
+                                        <button id="sprinkler2status" onclick="sprinkler2buttontoggle()">ON</button>
+                                        <p class="text-center">This sprinkler system spans the lawn on the south-east side of house in front of the patio</p>
+                                        <p class="text-center"><span id="sprinkler2statustext" class="red"></span></p>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                        <h3 class="text-center">Phase 3 Sprinkler system status</h3>
+                                        <button id="sprinkler3status" onclick="sprinkler3buttontoggle()">ON</button>
+                                        <p class="text-center">This sprinkler system spans the lawn on the north-east side of house in the backyard</p>
+                                        <p class="text-center"><span id="sprinkler3statustext" class="red"></span></p>
+                                    </div>
+
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                        <h3 class="text-center">Phase 4 Sprinkler system status</h3>
+                                        <button id="sprinkler4status" onclick="sprinkler4buttontoggle()">ON</button>
+                                        <p class="text-center">This sprinkler system spans the lawn on the north-west side of house in front of the tea table area</p>
+                                        <p class="text-center"><span id="sprinkler4statustext" class="red"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row margin-top-20">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                                    <a href="#menu" class="change-section">
+                                        <div class="black-bg btn-menu">
+                                            <h2>Home</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section><!-- /.company-intor-section -->
+                        <section id="thermostat-section" class="inactive">
+                            <div class="row">
+                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
                                     <h2 class="text-center">Testimonials and Awards</h2>
                                     <div class="col-sm-12 col-md-12">
                                         <p>Maecenas euismod viverra enim, sed sodales nunc sagittis vel. Nullam placerat dignissim turpis, nec auctor leo malesuada vitae. Nunc a arcu fringilla, rutrum erat blandit, sollicitudin ipsum. Vivamus vitae cursus nibh. Etiam libero sapien, dictum sed dignissim a, lobortis quis sem. Morbi placerat, est eu vehicula dignissim, magna lacus tristique turpis, ut sollicitudin ante nulla at sem. Fusce neque nulla, fermentum at turpis elementum, venenatis viverra felis. Donec eget ipsum non dolor pulvinar ultricies vel id risus. Etiam tincidunt aliquet massa, sodales gravida magna posuere sit amet. Nullam tempus nec urna iaculis lacinia.</p>
@@ -282,6 +342,49 @@
                                 </div>
                             </div>
                         </section><!-- /.company-intor-section -->
+                        <section id="sockets-section" class="inactive">
+                            <div class="row">
+                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
+
+                                    <h2 class="text-center">Testimonials and Awards</h2>
+                                    <div class="col-sm-12 col-md-12">
+                                        <p>Everything about sockets</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row margin-top-20">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                                    <a href="#menu" class="change-section">
+                                        <div class="black-bg btn-menu">
+                                            <h2>Home</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    <!--<section id="lighting-section" class="inactive">-->
+                            <!--<div class="row">-->
+                                <!--<div class="black-bg col-sm-12 col-md-12 col-lg-12">-->
+
+                                    <!--<h2 class="text-center">Testimonials and Awards</h2>-->
+                                    <!--<div class="col-sm-12 col-md-12">-->
+                                        <!--<p>Maecenas euismod viverra enim, sed sodales nunc sagittis vel. Nullam placerat dignissim turpis, nec auctor leo malesuada vitae. Nunc a arcu fringilla, rutrum erat blandit, sollicitudin ipsum. Vivamus vitae cursus nibh. Etiam libero sapien, dictum sed dignissim a, lobortis quis sem. Morbi placerat, est eu vehicula dignissim, magna lacus tristique turpis, ut sollicitudin ante nulla at sem. Fusce neque nulla, fermentum at turpis elementum, venenatis viverra felis. Donec eget ipsum non dolor pulvinar ultricies vel id risus. Etiam tincidunt aliquet massa, sodales gravida magna posuere sit amet. Nullam tempus nec urna iaculis lacinia.</p>-->
+                                        <!--<p>Sed adipiscing ultricies diam ut blandit. <a href="#">Nullam lobortis</a> egestas velit, quis vulputate leo feugiat a. Etiam venenatis odio quis pharetra pulvinar. Maecenas nec tempus lectus. Ut quam nisl, tempus eu rutrum at, volutpat at tortor. Donec dapibus gravida elit. Sed venenatis malesuada elementum. Donec vestibulum odio metus, vel tempor magna luctus et. Suspendisse porttitor, justo eget interdum faucibus, turpis nibh lacinia urna, vitae porta erat odio eu est. Duis laoreet dui id mi ultricies, ut dictum elit aliquet. Vivamus et libero enim. Curabitur adipiscing quis turpis sed consequat. Morbi ut arcu at sapien tempus lobortis. Etiam congue, enim eget condimentum consequat, mauris dolor tincidunt eros, vitae suscipit justo turpis sed turpis. Etiam adipiscing et orci ac condimentum.</p>-->
+                                    <!--</div>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="row margin-top-20">-->
+                                <!--<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">-->
+                                    <!--<a href="#menu" class="change-section">-->
+                                        <!--<div class="black-bg btn-menu">-->
+                                            <!--<h2>Home</h2>-->
+                                        <!--</div>-->
+                                    <!--</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</section>-->
 
 
                     </div><!-- /.templatemo-content -->
@@ -310,7 +413,95 @@ function removealarm() {
 }
 
 function alarm() {
-    secondPassed(parseInt(60));
+    secondPassed(parseInt(90));
+}
+
+function mainsprinklerbuttontoggle() {
+    if(document.getElementById('sprinklerstatus').innerHTML == 'ON') {
+       document.getElementById('sprinklerstatus').innerHTML = 'OFF';
+       document.getElementById('sprinklerstatustext').innerHTML = 'All phase sprinklers turned on!';
+    } else {
+         document.getElementById('sprinklerstatus').innerHTML = 'ON';
+         document.getElementById('sprinklerstatustext').innerHTML = 'All phase sprinklers turned off!';
+    }
+}
+
+function sprinkler1buttontoggle() {
+    if(document.getElementById('sprinklerstatus').innerHTML == 'OFF') {
+        alert('Cant turn Phase 1 sprinkler system on as master sprinkler is already on!');
+    } else if(document.getElementById('sprinkler1status').innerHTML == 'ON') {
+       document.getElementById('sprinkler1status').innerHTML = 'OFF';
+       document.getElementById('sprinkler1statustext').innerHTML = 'Phase 1 Sprinkler system turned on!';
+    } else {
+         document.getElementById('sprinkler1status').innerHTML = 'ON';
+         document.getElementById('sprinkler1statustext').innerHTML = 'Phase 1 Sprinkler system turned off!';
+    }
+}
+
+function sprinkler2buttontoggle() {
+    if(document.getElementById('sprinklerstatus').innerHTML == 'OFF') {
+        alert('Cant turn Phase 2 sprinkler system on as master sprinkler is already on!');
+    } else if(document.getElementById('sprinkler2status').innerHTML == 'ON') {
+       document.getElementById('sprinkler2status').innerHTML = 'OFF';
+       document.getElementById('sprinkler2statustext').innerHTML = 'Phase 2 Sprinkler system turned on!';
+    } else {
+         document.getElementById('sprinkler2status').innerHTML = 'ON';
+         document.getElementById('sprinkler2statustext').innerHTML = 'Phase 2 Sprinkler system turned off!';
+    }
+}
+
+function sprinkler3buttontoggle() {
+    if(document.getElementById('sprinklerstatus').innerHTML == 'OFF') {
+        alert('Cant turn Phase 3 sprinkler system on as master sprinkler is already on!');
+    } else if(document.getElementById('sprinkler3status').innerHTML == 'ON') {
+       document.getElementById('sprinkler3status').innerHTML = 'OFF';
+       document.getElementById('sprinkler3statustext').innerHTML = 'Phase 3 Sprinkler system turned on!';
+    } else {
+         document.getElementById('sprinkler3status').innerHTML = 'ON';
+         document.getElementById('sprinkler3statustext').innerHTML = 'Phase 3 Sprinkler system turned off!';
+    }
+}
+
+function sprinkler4buttontoggle() {
+    if(document.getElementById('sprinklerstatus').innerHTML == 'OFF') {
+        alert('Cant turn Phase 4 sprinkler system on as master sprinkler is already on!');
+    } else if(document.getElementById('sprinkler4status').innerHTML == 'ON') {
+       document.getElementById('sprinkler4status').innerHTML = 'OFF';
+       document.getElementById('sprinkler4statustext').innerHTML = 'Phase 4 Sprinkler system turned on!';
+    } else {
+         document.getElementById('sprinkler4status').innerHTML = 'ON';
+         document.getElementById('sprinkler4statustext').innerHTML = 'Phase 4 Sprinkler system turned off!';
+    }
+}
+
+function adduser() {
+    var fname = document.getElementById('contact_fname').value
+    var lname = document.getElementById('contact_lname').value
+    var username = document.getElementById('contact_email').value
+    var password = document.getElementById('contact_password').value
+        if(!fname || !lname || !username || !password) {
+            alert('Oops... You did not complete the form!');
+        } else {
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                data: JSON.stringify({'fname': fname, 'lname': lname, 'username': username, 'password': password}),
+                contentType: 'application/json; charset=utf-8',
+                url: 'http://localhost:3333/adduser',
+                success: function(data) {
+                    if(!data.error) {
+                    console.log(data);
+                    alert('User account created for ' + fname + ' ' + lname + '!');
+                    window.location.href='/home';
+                    } else {
+                        alert('Could not add user! Please try again.')
+                    }
+                }
+//                error: function(data) {
+//                    alert('Ajax request error! ' + data);
+//                }
+                });
+        }
 }
 
 var temptime;

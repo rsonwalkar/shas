@@ -30,7 +30,7 @@ def login():
 def authenticate():
     username = request.get_json()['username']
     password = request.get_json()['password']
-    conn = pymysql.connect(host='localhost', port=3306, db='test')
+    conn = pymysql.connect(host='localhost', user='root', passwd='', port=3306, db='test')
     cursor = conn.cursor()
     cursor.execute('select fname, lname from login where username="' + username + '" and password="' + password + '"')
     rows = cursor.fetchall()
@@ -41,6 +41,19 @@ def authenticate():
         return jsonify(**response)
     else:
         return jsonify({'error': 'Could not authenticate'})
+
+@app.route("/adduser", methods=['POST'])
+def adduser():
+    fname = request.get_json()['fname']
+    lname = request.get_json()['lname']
+    username = request.get_json()['username']
+    password = request.get_json()['password']
+    conn = pymysql.connect(host='localhost', user='root', passwd='', port=3306, db='test')
+    cursor = conn.cursor()
+    cursor.execute('insert into login values ("' + fname + '","' + lname + '","' + username + '","' + password + '")')
+    # The commit will insert the new entry into the database
+    conn.commit()
+    return jsonify({'success': 'row inserted'})
 
 @app.route("/home", methods=['GET'])
 def home():

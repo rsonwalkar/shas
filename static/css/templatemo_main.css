@@ -14,7 +14,7 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, span, p { font-family: 'Raleway', sans-serif; }
+h1, h2, h3, h4, h5, h6, span, p { font-family: 'Raleway', sans-serif; color: #ffffff}
 
 .blue { color: #6CF; }
 
@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Raleway', sans-serif; }
 .orangered { color: orangered}
 
 h2 {
+	padding: 10px 0;
+}
+
+h3 {
 	padding: 10px 0;
 }
 
