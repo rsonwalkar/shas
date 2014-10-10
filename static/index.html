@@ -47,6 +47,7 @@
                     <img src="images/thermostat.jpg" id="thermostat-img" class="main-img inactive" alt="Testimonials">
                     <img src="images/sockets.jpg" id="sockets-img" class="main-img inactive" alt="Testimonials">
                     <img src="images/security.jpg" id="security-img" class="main-img inactive" alt="Testimonials">
+                    <img src="images/lighting.jpg" id="lighting-img" class="main-img inactive" alt="Testimonials">
                 </div>
             </div>
 
@@ -279,35 +280,51 @@
                                     <div class="col-sm-12 col-md-12 text-center">
                                         <h3 class="text-center">Master Sprinkler system status</h3>
                                         <button id="sprinklerstatus" onclick="mainsprinklerbuttontoggle()">ON</button>
-                                        <p class="text-center"><span id="sprinklerstatustext" class="red"></span></p>
+                                        <p class="text-center" id="sprinklerstatustext"></p>
                                     </div>
 
                                     <div class="col-sm-12 col-md-12 text-center">
                                         <h3 class="text-center">Phase 1 Sprinkler system status</h3>
                                         <button id="sprinkler1status" onclick="sprinkler1buttontoggle()">ON</button>
-                                        <p class="text-center">This sprinkler system spans the lawn on the south-west side of house in front of garage</p>
-                                        <p class="text-center"><span id="sprinkler1statustext" class="red"></span></p>
+                                        <p id="sprinkler1content" class="text-center">
+                                            This sprinkler system spans the lawn on the south-west side of house in front of garage
+                                        </p>
+                                        <button id="sprinkler1contentbutton" onclick="sprinklercontentbuttontoggle('sprinkler1contentbutton','sprinkler1content')">Edit</button>
+                                        <!--<p class="text-center">This sprinkler system spans the lawn on the south-west side of house in front of garage</p>-->
+                                        <p class="text-center" id="sprinkler1statustext"></p>
                                     </div>
 
                                     <div class="col-sm-12 col-md-12 text-center">
                                         <h3 class="text-center">Phase 2 Sprinkler system status</h3>
                                         <button id="sprinkler2status" onclick="sprinkler2buttontoggle()">ON</button>
-                                        <p class="text-center">This sprinkler system spans the lawn on the south-east side of house in front of the patio</p>
-                                        <p class="text-center"><span id="sprinkler2statustext" class="red"></span></p>
+                                        <p id="sprinkler2content" class="text-center">
+                                            This sprinkler system spans the lawn on the south-east side of house in front of the patio
+                                        </p>
+                                        <button id="sprinkler2contentbutton" onclick="sprinklercontentbuttontoggle('sprinkler2contentbutton','sprinkler2content')">Edit</button>
+                                        <!--<p class="text-center">This sprinkler system spans the lawn on the south-east side of house in front of the patio</p>-->
+                                        <p class="text-center" id="sprinkler2statustext"></p>
                                     </div>
 
                                     <div class="col-sm-12 col-md-12 text-center">
                                         <h3 class="text-center">Phase 3 Sprinkler system status</h3>
                                         <button id="sprinkler3status" onclick="sprinkler3buttontoggle()">ON</button>
-                                        <p class="text-center">This sprinkler system spans the lawn on the north-east side of house in the backyard</p>
-                                        <p class="text-center"><span id="sprinkler3statustext" class="red"></span></p>
+                                        <p id="sprinkler3content" class="text-center">
+                                            This sprinkler system spans the lawn on the north-east side of house in the backyard
+                                        </p>
+                                        <button id="sprinkler3contentbutton" onclick="sprinklercontentbuttontoggle('sprinkler3contentbutton','sprinkler3content')">Edit</button>
+                                        <!--<p class="text-center">This sprinkler system spans the lawn on the north-east side of house in the backyard</p>-->
+                                        <p class="text-center" id="sprinkler3statustext"></p>
                                     </div>
 
                                     <div class="col-sm-12 col-md-12 text-center">
                                         <h3 class="text-center">Phase 4 Sprinkler system status</h3>
                                         <button id="sprinkler4status" onclick="sprinkler4buttontoggle()">ON</button>
-                                        <p class="text-center">This sprinkler system spans the lawn on the north-west side of house in front of the tea table area</p>
-                                        <p class="text-center"><span id="sprinkler4statustext" class="red"></span></p>
+                                        <p id="sprinkler4content" class="text-center">
+                                            This sprinkler system spans the lawn on the north-west side of house in front of the tea table area
+                                        </p>
+                                        <button id="sprinkler4contentbutton" onclick="sprinklercontentbuttontoggle('sprinkler4contentbutton','sprinkler4content')">Edit</button>
+                                        <!--<p class="text-center">This sprinkler system spans the lawn on the north-west side of house in front of the tea table area</p>-->
+                                        <p class="text-center" id="sprinkler4statustext"></p>
                                     </div>
                                 </div>
                             </div>
@@ -324,12 +341,28 @@
                         <section id="thermostat-section" class="inactive">
                             <div class="row">
                                 <div class="black-bg col-sm-12 col-md-12 col-lg-12">
-                                    <h2 class="text-center">Testimonials and Awards</h2>
-                                    <div class="col-sm-12 col-md-12">
-                                        <p>Maecenas euismod viverra enim, sed sodales nunc sagittis vel. Nullam placerat dignissim turpis, nec auctor leo malesuada vitae. Nunc a arcu fringilla, rutrum erat blandit, sollicitudin ipsum. Vivamus vitae cursus nibh. Etiam libero sapien, dictum sed dignissim a, lobortis quis sem. Morbi placerat, est eu vehicula dignissim, magna lacus tristique turpis, ut sollicitudin ante nulla at sem. Fusce neque nulla, fermentum at turpis elementum, venenatis viverra felis. Donec eget ipsum non dolor pulvinar ultricies vel id risus. Etiam tincidunt aliquet massa, sodales gravida magna posuere sit amet. Nullam tempus nec urna iaculis lacinia.</p>
-                                        <p>Sed adipiscing ultricies diam ut blandit. <a href="#">Nullam lobortis</a> egestas velit, quis vulputate leo feugiat a. Etiam venenatis odio quis pharetra pulvinar. Maecenas nec tempus lectus. Ut quam nisl, tempus eu rutrum at, volutpat at tortor. Donec dapibus gravida elit. Sed venenatis malesuada elementum. Donec vestibulum odio metus, vel tempor magna luctus et. Suspendisse porttitor, justo eget interdum faucibus, turpis nibh lacinia urna, vitae porta erat odio eu est. Duis laoreet dui id mi ultricies, ut dictum elit aliquet. Vivamus et libero enim. Curabitur adipiscing quis turpis sed consequat. Morbi ut arcu at sapien tempus lobortis. Etiam congue, enim eget condimentum consequat, mauris dolor tincidunt eros, vitae suscipit justo turpis sed turpis. Etiam adipiscing et orci ac condimentum.</p>
+                                    <h2 class="text-center">Thermostats</h2>
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                        <h3 class="text-center">Thermostat 1 status</h3>
+                                        <button id="thermostat1status" onclick="thermostat1buttontoggle()">ON</button>
+                                        <p id="thermostat1content" class="text-center">
+                                            This thermostat controls temperature on floor one.
+                                        </p>
+                                        <button id="thermostat1contentbutton" onclick="thermostatcontentbuttontoggle('thermostat1contentbutton','thermostat1content')">Edit</button>
+                                        <!--<p class="text-center">This sprinkler system spans the lawn on the south-west side of house in front of garage</p>-->
+                                        <p class="text-center" id="thermostat1statustext"></p>
                                     </div>
 
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                        <h3 class="text-center">Thermostat 2 status</h3>
+                                        <button id="thermostat2status" onclick="thermostat2buttontoggle()">ON</button>
+                                        <p id="thermostat2content" class="text-center">
+                                            This thermostat controls temperature on floor two.
+                                        </p>
+                                        <button id="thermostat2contentbutton" onclick="thermostatcontentbuttontoggle('thermostat2contentbutton','thermostat2content')">Edit</button>
+                                        <!--<p class="text-center">This sprinkler system spans the lawn on the south-east side of house in front of the patio</p>-->
+                                        <p class="text-center" id="thermostat2statustext"></p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row margin-top-20">
@@ -363,28 +396,27 @@
                                 </div>
                             </div>
                         </section>
-                    <!--<section id="lighting-section" class="inactive">-->
-                            <!--<div class="row">-->
-                                <!--<div class="black-bg col-sm-12 col-md-12 col-lg-12">-->
+                    <section id="lighting-section" class="inactive">
+                            <div class="row">
+                                <div class="black-bg col-sm-12 col-md-12 col-lg-12">
 
-                                    <!--<h2 class="text-center">Testimonials and Awards</h2>-->
-                                    <!--<div class="col-sm-12 col-md-12">-->
-                                        <!--<p>Maecenas euismod viverra enim, sed sodales nunc sagittis vel. Nullam placerat dignissim turpis, nec auctor leo malesuada vitae. Nunc a arcu fringilla, rutrum erat blandit, sollicitudin ipsum. Vivamus vitae cursus nibh. Etiam libero sapien, dictum sed dignissim a, lobortis quis sem. Morbi placerat, est eu vehicula dignissim, magna lacus tristique turpis, ut sollicitudin ante nulla at sem. Fusce neque nulla, fermentum at turpis elementum, venenatis viverra felis. Donec eget ipsum non dolor pulvinar ultricies vel id risus. Etiam tincidunt aliquet massa, sodales gravida magna posuere sit amet. Nullam tempus nec urna iaculis lacinia.</p>-->
-                                        <!--<p>Sed adipiscing ultricies diam ut blandit. <a href="#">Nullam lobortis</a> egestas velit, quis vulputate leo feugiat a. Etiam venenatis odio quis pharetra pulvinar. Maecenas nec tempus lectus. Ut quam nisl, tempus eu rutrum at, volutpat at tortor. Donec dapibus gravida elit. Sed venenatis malesuada elementum. Donec vestibulum odio metus, vel tempor magna luctus et. Suspendisse porttitor, justo eget interdum faucibus, turpis nibh lacinia urna, vitae porta erat odio eu est. Duis laoreet dui id mi ultricies, ut dictum elit aliquet. Vivamus et libero enim. Curabitur adipiscing quis turpis sed consequat. Morbi ut arcu at sapien tempus lobortis. Etiam congue, enim eget condimentum consequat, mauris dolor tincidunt eros, vitae suscipit justo turpis sed turpis. Etiam adipiscing et orci ac condimentum.</p>-->
-                                    <!--</div>-->
+                                    <h2 class="text-center">Testimonials and Awards</h2>
+                                    <div class="col-sm-12 col-md-12">
+                                        <p>Lighting information here.</p>
+                                    </div>
 
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="row margin-top-20">-->
-                                <!--<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">-->
-                                    <!--<a href="#menu" class="change-section">-->
-                                        <!--<div class="black-bg btn-menu">-->
-                                            <!--<h2>Home</h2>-->
-                                        <!--</div>-->
-                                    <!--</a>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</section>-->
+                                </div>
+                            </div>
+                            <div class="row margin-top-20">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6  pull-right">
+                                    <a href="#menu" class="change-section">
+                                        <div class="black-bg btn-menu">
+                                            <h2>Home</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
 
 
                     </div><!-- /.templatemo-content -->
@@ -419,10 +451,10 @@ function alarm() {
 function mainsprinklerbuttontoggle() {
     if(document.getElementById('sprinklerstatus').innerHTML == 'ON') {
        document.getElementById('sprinklerstatus').innerHTML = 'OFF';
-       document.getElementById('sprinklerstatustext').innerHTML = 'All phase sprinklers turned on!';
+       document.getElementById('sprinklerstatustext').innerHTML = '<span class="green">All phase sprinklers turned on!</span>';
     } else {
          document.getElementById('sprinklerstatus').innerHTML = 'ON';
-         document.getElementById('sprinklerstatustext').innerHTML = 'All phase sprinklers turned off!';
+         document.getElementById('sprinklerstatustext').innerHTML = '<span class="red">All phase sprinklers turned off!</span>';
     }
 }
 
@@ -431,10 +463,10 @@ function sprinkler1buttontoggle() {
         alert('Cant turn Phase 1 sprinkler system on as master sprinkler is already on!');
     } else if(document.getElementById('sprinkler1status').innerHTML == 'ON') {
        document.getElementById('sprinkler1status').innerHTML = 'OFF';
-       document.getElementById('sprinkler1statustext').innerHTML = 'Phase 1 Sprinkler system turned on!';
+       document.getElementById('sprinkler1statustext').innerHTML = '<span class="green">Phase 1 Sprinkler system turned on!</span>';
     } else {
          document.getElementById('sprinkler1status').innerHTML = 'ON';
-         document.getElementById('sprinkler1statustext').innerHTML = 'Phase 1 Sprinkler system turned off!';
+         document.getElementById('sprinkler1statustext').innerHTML = '<span class="red">Phase 1 Sprinkler system turned off!</span>';
     }
 }
 
@@ -443,10 +475,10 @@ function sprinkler2buttontoggle() {
         alert('Cant turn Phase 2 sprinkler system on as master sprinkler is already on!');
     } else if(document.getElementById('sprinkler2status').innerHTML == 'ON') {
        document.getElementById('sprinkler2status').innerHTML = 'OFF';
-       document.getElementById('sprinkler2statustext').innerHTML = 'Phase 2 Sprinkler system turned on!';
+       document.getElementById('sprinkler2statustext').innerHTML = '<span class="green">Phase 2 Sprinkler system turned on!</span>';
     } else {
          document.getElementById('sprinkler2status').innerHTML = 'ON';
-         document.getElementById('sprinkler2statustext').innerHTML = 'Phase 2 Sprinkler system turned off!';
+         document.getElementById('sprinkler2statustext').innerHTML = '<span class="red">Phase 2 Sprinkler system turned off!</span>';
     }
 }
 
@@ -455,10 +487,10 @@ function sprinkler3buttontoggle() {
         alert('Cant turn Phase 3 sprinkler system on as master sprinkler is already on!');
     } else if(document.getElementById('sprinkler3status').innerHTML == 'ON') {
        document.getElementById('sprinkler3status').innerHTML = 'OFF';
-       document.getElementById('sprinkler3statustext').innerHTML = 'Phase 3 Sprinkler system turned on!';
+       document.getElementById('sprinkler3statustext').innerHTML = '<span class="green">Phase 3 Sprinkler system turned on!</span>';
     } else {
          document.getElementById('sprinkler3status').innerHTML = 'ON';
-         document.getElementById('sprinkler3statustext').innerHTML = 'Phase 3 Sprinkler system turned off!';
+         document.getElementById('sprinkler3statustext').innerHTML = '<span class="red">Phase 3 Sprinkler system turned off!</span>';
     }
 }
 
@@ -467,10 +499,50 @@ function sprinkler4buttontoggle() {
         alert('Cant turn Phase 4 sprinkler system on as master sprinkler is already on!');
     } else if(document.getElementById('sprinkler4status').innerHTML == 'ON') {
        document.getElementById('sprinkler4status').innerHTML = 'OFF';
-       document.getElementById('sprinkler4statustext').innerHTML = 'Phase 4 Sprinkler system turned on!';
+       document.getElementById('sprinkler4statustext').innerHTML = '<span class="green">Phase 4 Sprinkler system turned on!</span>';
     } else {
          document.getElementById('sprinkler4status').innerHTML = 'ON';
-         document.getElementById('sprinkler4statustext').innerHTML = 'Phase 4 Sprinkler system turned off!';
+         document.getElementById('sprinkler4statustext').innerHTML = '<span class="red">Phase 4 Sprinkler system turned off!</span>';
+    }
+}
+
+function thermostat1buttontoggle() {
+    if(document.getElementById('thermostat1status').innerHTML == 'ON') {
+       document.getElementById('thermostat1status').innerHTML = 'OFF';
+       document.getElementById('thermostat1statustext').innerHTML = '<span class="green">Thermostat on floor one is turned on!</span>';
+    } else {
+         document.getElementById('thermostat1status').innerHTML = 'ON';
+         document.getElementById('thermostat1statustext').innerHTML = '<span class="red">Thermostat on floor one is turned off!</span>';
+    }
+}
+
+function thermostat2buttontoggle() {
+    if(document.getElementById('thermostat2status').innerHTML == 'ON') {
+       document.getElementById('thermostat2status').innerHTML = 'OFF';
+       document.getElementById('thermostat2statustext').innerHTML = '<span class="green">Thermostat on floor two is turned on!</span>';
+    } else {
+         document.getElementById('thermostat2status').innerHTML = 'ON';
+         document.getElementById('thermostat2statustext').innerHTML = '<span class="red">Thermostat on floor two is turned off!</span>';
+    }
+}
+
+function sprinklercontentbuttontoggle(button_id, content_id) {
+    if(document.getElementById(button_id).innerHTML == 'Edit') {
+       document.getElementById(button_id).innerHTML = 'Save';
+       document.getElementById(content_id).contentEditable = 'true';
+    } else if(document.getElementById(button_id).innerHTML == 'Save') {
+        document.getElementById(button_id).innerHTML = 'Edit';
+        document.getElementById(content_id).contentEditable = 'false';
+    }
+}
+
+function thermostatcontentbuttontoggle(button_id, content_id) {
+    if(document.getElementById(button_id).innerHTML == 'Edit') {
+       document.getElementById(button_id).innerHTML = 'Save';
+       document.getElementById(content_id).contentEditable = 'true';
+    } else if(document.getElementById(button_id).innerHTML == 'Save') {
+        document.getElementById(button_id).innerHTML = 'Edit';
+        document.getElementById(content_id).contentEditable = 'false';
     }
 }
 
@@ -497,9 +569,6 @@ function adduser() {
                         alert('Could not add user! Please try again.')
                     }
                 }
-//                error: function(data) {
-//                    alert('Ajax request error! ' + data);
-//                }
                 });
         }
 }
@@ -525,11 +594,6 @@ function secondPassed(seconds) {
     }
 }
 setInterval('secondPassed(temptime)', 1000);
-
-
-
-
-
 
 function logout() {
     window.location.replace("http://localhost:3333");
